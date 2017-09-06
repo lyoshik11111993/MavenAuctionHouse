@@ -1,18 +1,18 @@
 package com.example;
 
-import com.example.repositories.*;
+import com.example.repository.*;
 
 import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Menu {
     Scanner scanner = new Scanner(System.in);
-    SellerConverter sellerConverter = new SellerConverter();
-    BuyerConverter buyerConverter = new BuyerConverter();
-    ProductConverter productConverter = new ProductConverter();
-    BidConverter bidConverter = new BidConverter();
+    SellerRepository sellerRepository = new SellerRepository();
+    BuyerRepository buyerRepository = new BuyerRepository();
+    ProductRepository productRepository = new ProductRepository();
+    BidRepository bidConverter = new BidRepository();
+    Repository repository = new Repository();
     Printer printer = new Printer();
-    SQLRequest sqlRequest = new SQLRequest();
 
     public Menu() throws SQLException {
     }
@@ -29,19 +29,19 @@ public class Menu {
             case 1:
                 System.out.println("Add new Seller: ");
                 String newSeller = scanner.next();
-                sellerConverter.sellerInsert(newSeller);
+                sellerRepository.sellerInsert(newSeller);
                 break;
             case 2:
                 System.out.println("Add new Buyer: ");
                 String newBuyer = scanner.next();
-                buyerConverter.buyerInsert(newBuyer);
+                buyerRepository.buyerInsert(newBuyer);
                 break;
             case 3:
                 System.out.println("Add new Product: ");
                 String newProduct = scanner.next();
                 System.out.println("Add Seller`s Id: ");
                 String newSellerId = scanner.next();
-                productConverter.productInsert(newProduct, newSellerId);
+                productRepository.productInsert(newProduct, newSellerId);
                 break;
             case 4:
                 System.out.println("Add new Bid: ");
@@ -55,16 +55,16 @@ public class Menu {
             case 5:
                 System.out.println("There are all items of auction: ");
                 System.out.println("SELLERS:");
-                printer.print(sellerConverter.convert(sqlRequest.executeQuery("SELECT * FROM Seller")));
+                printer.print(sellerRepository.convert(repository.executeQuery("SELECT * FROM Seller")));
                 System.out.println("BUYERS:");
-                printer.print(buyerConverter.convert(sqlRequest.executeQuery("SELECT * FROM Buyer")));
+                printer.print(buyerRepository.convert(repository.executeQuery("SELECT * FROM Buyer")));
                 System.out.println("PRODUCTS:");
-                printer.print(productConverter.convert(sqlRequest.executeQuery("SELECT * FROM product")));
+                printer.print(productRepository.convert(repository.executeQuery("SELECT * FROM product")));
                 System.out.println("BIDS:");
-                printer.print(bidConverter.convert(sqlRequest.executeQuery("SELECT * FROM bid")));
+                printer.print(bidConverter.convert(repository.executeQuery("SELECT * FROM bid")));
                 break;
             case 6:
-                sqlRequest.reset();
+                repository.reset();
                 break;
             case 0:
                 System.out.println("Auction closed!");
