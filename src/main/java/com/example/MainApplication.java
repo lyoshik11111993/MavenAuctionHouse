@@ -8,17 +8,18 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainApplication extends Application{
-    SceneCreater sceneCreater = new SceneCreater();
+public class MainApplication extends Application {
+
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setTitle("Auction House");
-        primaryStage.setScene(sceneCreater.createScene("../../main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../../main.fxml"));
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }

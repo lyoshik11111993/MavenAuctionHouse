@@ -1,17 +1,15 @@
-package com.example.repositories;
+package com.example.repository;
 
-import com.example.domains.Product;
-import com.example.SQLRequest;
+import com.example.entity.Product;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductConverter {
-    private SQLRequest sqlRequest = new SQLRequest();
+public class ProductRepository extends Repository{
 
-    public ProductConverter() throws SQLException {
+    public ProductRepository() throws SQLException {
     }
 
     public List<Product> convert(ResultSet resultSet) throws SQLException {
@@ -27,6 +25,6 @@ public class ProductConverter {
     }
 
     public void productInsert(String x, String y){
-        sqlRequest.update("INSERT INTO product (`Name`, `seller_id`) VALUES (?, ?)", x, y);
+        update("INSERT INTO product (`Name`, `seller_id`) VALUES (?, ?)", x, y);
     }
 }

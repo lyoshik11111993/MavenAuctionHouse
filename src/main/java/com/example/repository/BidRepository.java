@@ -1,17 +1,15 @@
-package com.example.repositories;
+package com.example.repository;
 
-import com.example.domains.Bid;
-import com.example.SQLRequest;
+import com.example.entity.Bid;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BidConverter {
-    private SQLRequest sqlRequest = new SQLRequest();
+public class BidRepository extends Repository{
 
-    public BidConverter() throws SQLException {
+    public BidRepository() throws SQLException {
     }
 
     public List<Bid> convert(ResultSet resultSet) throws SQLException {
@@ -28,6 +26,6 @@ public class BidConverter {
     }
 
     public void bidInsert(String x, String y, String z){
-        sqlRequest.update("INSERT INTO Bid (`size`, `product_id`, `buyer_id`) VALUES (?, ?, ?)", x, y, z);
+        update("INSERT INTO Bid (`size`, `product_id`, `buyer_id`) VALUES (?, ?, ?)", x, y, z);
     }
 }

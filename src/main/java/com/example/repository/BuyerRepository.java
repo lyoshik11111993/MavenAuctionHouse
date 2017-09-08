@@ -1,17 +1,15 @@
-package com.example.repositories;
+package com.example.repository;
 
-import com.example.domains.Buyer;
-import com.example.SQLRequest;
+import com.example.entity.Buyer;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BuyerConverter {
-    private SQLRequest sqlRequest = new SQLRequest();
+public class BuyerRepository extends Repository{
 
-    public BuyerConverter() throws SQLException {
+    public BuyerRepository() throws SQLException {
     }
 
     public List<Buyer> convert(ResultSet resultSet) throws SQLException {
@@ -27,6 +25,6 @@ public class BuyerConverter {
     }
 
     public void buyerInsert(String x){
-        sqlRequest.update("INSERT INTO Buyer (`Name`) VALUES (?)", x);
+        update("INSERT INTO Buyer (`Name`) VALUES (?)", x);
     }
 }
