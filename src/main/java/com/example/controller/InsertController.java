@@ -32,7 +32,7 @@ public class InsertController {
 
     @FXML
     private void goToAddSeller() throws IOException {
-        workPane.getChildren().removeAll(workPane);
+//        workPane.getChildren().removeAll(workPane);
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("insert/addSeller.fxml"));
         workPane.getChildren().addAll(root);
         insertMenuBtn.setText(sellerBtn.getText());
@@ -40,7 +40,7 @@ public class InsertController {
 
     @FXML
     private void goToAddBuyer() throws IOException {
-        workPane.getChildren().removeAll(workPane);
+//        workPane.getChildren().removeAll(workPane);
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("insert/addBuyer.fxml"));
         workPane.getChildren().addAll(root);
         insertMenuBtn.setText(buyerBtn.getText());
@@ -48,7 +48,7 @@ public class InsertController {
 
     @FXML
     private void goToAddProduct() throws IOException {
-        workPane.getChildren().removeAll(workPane);
+//        workPane.getChildren().removeAll(workPane);
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("insert/addProduct.fxml"));
         workPane.getChildren().addAll(root);
         insertMenuBtn.setText(productBtn.getText());
@@ -56,7 +56,7 @@ public class InsertController {
 
     @FXML
     private void goToAddBid() throws IOException {
-        workPane.getChildren().removeAll(workPane);
+//        workPane.getChildren().removeAll(workPane);
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("insert/addBid.fxml"));
         workPane.getChildren().addAll(root);
         insertMenuBtn.setText(bidBtn.getText());

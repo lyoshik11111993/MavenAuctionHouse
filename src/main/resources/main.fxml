@@ -11,9 +11,9 @@
       <Pane prefHeight="67.0" prefWidth="600.0">
          <children>
             <Button fx:id="insertBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#insert" prefHeight="25.0" prefWidth="134.0" text="Insert" />
-            <Button fx:id="updateBtn" layoutX="158.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="134.0" text="Update" />
-            <Button fx:id="selectBtn" layoutX="300.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="134.0" text="Select" />
-            <Button fx:id="deleteBtn" layoutX="441.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="145.0" text="Delete" />
+            <Button fx:id="updateBtn" layoutX="158.0" layoutY="14.0" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="134.0" text="Update" />
+            <Button fx:id="selectBtn" layoutX="300.0" layoutY="14.0" mnemonicParsing="false" onAction="#select" prefHeight="25.0" prefWidth="134.0" text="Select" />
+            <Button fx:id="deleteBtn" layoutX="441.0" layoutY="14.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="145.0" text="Delete" />
          </children>
       </Pane>
       <Pane fx:id="selectPane" layoutY="60.0" prefHeight="340.0" prefWidth="600.0">

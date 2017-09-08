@@ -10,13 +10,13 @@
     <children>
         <Pane prefHeight="241.0" prefWidth="600.0">
             <children>
-                <TextField layoutX="151.0" layoutY="35.0" prefHeight="32.0" prefWidth="298.0" promptText="Enter name" />
-                <Button layoutX="269.0" layoutY="168.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="62.0" text="Add">
+                <TextField fx:id="insertTextFieldName" layoutX="151.0" layoutY="35.0" prefHeight="32.0" prefWidth="298.0" promptText="Enter name" />
+                <Button layoutX="269.0" layoutY="168.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="32.0" prefWidth="62.0" text="Add">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Button>
-            <TextField layoutX="150.0" layoutY="101.0" prefHeight="32.0" prefWidth="298.0" promptText="Enter Seller`s ID" />
+            <TextField fx:id="insertTextFieldId" layoutX="150.0" layoutY="101.0" prefHeight="32.0" prefWidth="298.0" promptText="Enter Seller`s ID" />
             </children></Pane>
     </children>
 </AnchorPane>

@@ -18,4 +18,22 @@ public class MainController {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("insert.fxml"));
         selectPane.getChildren().setAll(root);
     }
+
+    @FXML
+    private void select() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("select.fxml"));
+        selectPane.getChildren().setAll(root);
+    }
+
+    @FXML
+    private void delete() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("delete.fxml"));
+        selectPane.getChildren().setAll(root);
+    }
+
+    @FXML
+    private void update() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("update.fxml"));
+        selectPane.getChildren().setAll(root);
+    }
 }

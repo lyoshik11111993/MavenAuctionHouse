@@ -1,10 +1,12 @@
 package com.example.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
+@Builder
 public class Bid {
     private int id;
     private int size;

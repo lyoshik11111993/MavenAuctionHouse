@@ -8,7 +8,10 @@ import java.sql.SQLException;
 
 
 public class AddSellerController {
-    SellerService sellerService;
+    private final SellerService sellerService = new SellerService();
+
+    public AddSellerController() throws SQLException {
+    }
 
     @FXML
     private TextField insertTextField;

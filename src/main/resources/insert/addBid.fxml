@@ -10,14 +10,14 @@
     <children>
         <Pane prefHeight="241.0" prefWidth="600.0">
             <children>
-                <TextField layoutX="151.0" layoutY="35.0" prefHeight="32.0" prefWidth="298.0" promptText="Enter name" />
-                <Button layoutX="269.0" layoutY="187.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="62.0" text="Add">
+                <TextField fx:id="insertTextFieldSize" layoutX="151.0" layoutY="35.0" prefHeight="32.0" prefWidth="298.0" promptText="Enter name" />
+                <Button fx:id="addBid" layoutX="269.0" layoutY="187.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="62.0" text="Add">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Button>
-            <TextField layoutX="151.0" layoutY="89.0" prefHeight="32.0" prefWidth="298.0" promptText="Enter Buyer`s ID" />
-            <TextField layoutX="151.0" layoutY="137.0" prefHeight="32.0" prefWidth="298.0" promptText="Enter Product`s ID" />
+            <TextField fx:id="getInsertTextFieldBuyerId" layoutX="151.0" layoutY="89.0" prefHeight="32.0" prefWidth="298.0" promptText="Enter Buyer`s ID" />
+            <TextField fx:id="getGetInsertTextFieldProductId" layoutX="151.0" layoutY="137.0" prefHeight="32.0" prefWidth="298.0" promptText="Enter Product`s ID" />
             </children></Pane>
     </children>
 </AnchorPane>
